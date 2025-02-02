@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-xl font-bold">Detalles de {{ client }}</h1>
+<table class="table-auto w-full mt-4 border">
+    <thead>
+        <tr class="bg-gray-200">
+            <th class="px-4 py-2">Fecha</th>
+            <th class="px-4 py-2">Litros</th>
+            <th class="px-4 py-2">Importe (€)</th>
+            <th class="px-4 py-2">Matrícula</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td class="border px-4 py-2">{{ record['Fecha'] }}</td>
+            <td class="border px-4 py-2">{{ record['Cantidad de Litros'] }}</td>
+            <td class="border px-4 py-2">{{ record['Importe (€ pagado)'] }}</td>
+            <td class="border px-4 py-2">{{ record['matrícula'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

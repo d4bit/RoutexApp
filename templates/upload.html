@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-xl font-bold">Subir Archivo CSV</h1>
+<form action="/upload" method="POST" enctype="multipart/form-data" class="mt-4">
+    <input type="file" name="file" class="border p-2">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2">Subir</button>
+</form>
+{% endblock %}
